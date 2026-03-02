@@ -100,10 +100,26 @@ reiniciar_run = function()
     em_transicao = false;
     jogo_bloqueado = false;
 
-    criatura_existe = false;
+    if (instance_exists(obj_jogador))
+    {
+        var j = obj_jogador;
+
+        j.morto = false;
+        j.vida = 2;
+        j.invencivel = false;
+        j.em_hit = false;
+        j.stamina = j.stamina_max;
+        j.hsp = 0;
+        j.vsp = 0;
+        j.visible = true;
+        j.cutscene_final = false;
+        j.escondido = false;
+        j.esconderijo_atual = noone;
+    }
 
     obj_jogo.trocar_room(rm_quarto, "cama");
 };
+
 
 trocar_room = function(_room, _entrada)
 {
