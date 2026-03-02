@@ -44,8 +44,16 @@ if (estado_criatura == 2)
 // colisão com player inicia ataque
 if (instance_exists(obj_jogador))
 {
-    if (place_meeting(x,y,obj_jogador))
+    var j = obj_jogador;
+
+    if (place_meeting(x, y, j))
     {
+        if (j.escondido)
+        {
+            if (variable_instance_exists(j, "sair_esconderijo_forcado"))
+                j.sair_esconderijo_forcado();
+        }
+
         estado_criatura = 2;
         sprite_index = sprite_attack;
         image_index = 0;

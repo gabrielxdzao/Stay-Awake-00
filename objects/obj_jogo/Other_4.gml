@@ -1,3 +1,18 @@
+if (room == rm_quarto_fim)
+{
+    if (instance_exists(obj_jogador))
+    {
+        var j = obj_jogador;
+
+        j.cutscene_final = true;
+        j.visible = false;
+        j.hsp = 0;
+        j.vsp = 0;
+    }
+	return;
+}
+
+
 remedios_restantes = instance_number(obj_armario_base);
 
 fade_alpha = 1;

@@ -47,10 +47,20 @@ if (!em_transicao && !jogo_bloqueado)
         break;
 
         case ESTADO_JOGO.INSANIDADE:
-            sanidade -= vel_insanidade * dt;
+    sanidade -= vel_insanidade * dt;
 
-            if (sanidade <= 0)
-                estado = ESTADO_JOGO.COLAPSO;
+    if (sanidade <= 0)
+    {
+        estado = ESTADO_JOGO.COLAPSO;
+
+        if (instance_exists(obj_jogador))
+        {
+            var j = obj_jogador;
+            if (variable_instance_exists(j, "sair_esconderijo_forcado"))
+                j.sair_esconderijo_forcado();
+        }
+    }
+break;
         break;
 
         case ESTADO_JOGO.COLAPSO:

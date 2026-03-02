@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_remedio_fim",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_remedio_fim",
+    "path": "sprites/spr_remedio_fim/spr_remedio_fim.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

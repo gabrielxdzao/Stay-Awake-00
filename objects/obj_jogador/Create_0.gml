@@ -1,7 +1,7 @@
 
 
 colisor = obj_solido;
-
+cutscene_final = false;
 entrada_destino = "";
 ultimo_spawn = "";
 
@@ -45,12 +45,12 @@ tempo_invencivel_max = 1;
 
 // ESTAMINA
 
-stamina_max = 100;
+stamina_max = 140;
 stamina = stamina_max;
 
 gasto_corrida = 50;
-regen_andando = 10;
-regen_parado  = 25;
+regen_andando = 15;
+regen_parado  = 30;
 
 correndo = false;
 exausto = false;
@@ -267,6 +267,22 @@ atualizar_dano = function()
     }
 };
 
+sair_esconderijo_forcado = function()
+{
+    if (!escondido) return;
+
+    escondido = false;
+
+    if (instance_exists(esconderijo_atual))
+        esconderijo_atual.estado = 0;
+
+    esconderijo_atual = noone;
+    visible = true;
+
+    hsp = 0;
+    vsp = 0;
+};
+
 entrar_ou_sair_esconderijo = function()
 {
     if (!keyboard_check_pressed(ord("E"))) return;
@@ -359,7 +375,7 @@ atualizar = function()
             em_hit = false;
     }
 
-    var bloqueado = obj_jogo.em_transicao || obj_jogo.jogo_bloqueado || morto || em_hit || escondido;
+    var bloqueado = obj_jogo.em_transicao || obj_jogo.jogo_bloqueado || morto || em_hit || escondido || cutscene_final;
 
     var move = 0;
 

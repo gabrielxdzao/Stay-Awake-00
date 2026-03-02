@@ -1,4 +1,6 @@
 
+audio_master_gain(0.8);
+
  #region
 
 persistent = true;
@@ -25,7 +27,7 @@ estado = ESTADO_JOGO.LUCIDEZ;
 sanidade_max = 100;
 sanidade = sanidade_max;
 
-vel_lucidez = 10;
+vel_lucidez = 5;
 vel_insanidade = 1;
 
 
@@ -147,7 +149,7 @@ iniciar_novo_ciclo = function()
 }
 else if (ciclo_atual == 2)
 {
-	vel_lucidez = 20;
+	vel_lucidez = 10;
 	vel_insanidade = 3;
     max_falsos_ciclo = 3;
     total_armarios_ciclo = 11;
@@ -157,7 +159,7 @@ else if (ciclo_atual == 2)
 }
 else if (ciclo_atual == 3)
 {
-	vel_lucidez = 30;
+	vel_lucidez = 20;
 	vel_insanidade = 5;
     max_falsos_ciclo = 10;
     total_armarios_ciclo = 20;

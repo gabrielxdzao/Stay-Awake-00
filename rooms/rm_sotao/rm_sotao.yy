@@ -99,6 +99,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_737869D4","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"id_entrada","path":"objects/obj_ponto_entrada/obj_ponto_entrada.yy",},"objectId":{"name":"obj_ponto_entrada","path":"objects/obj_ponto_entrada/obj_ponto_entrada.yy",},"value":"\"sotao\"",},
           ],"isDnd":false,"objectId":{"name":"obj_ponto_entrada","path":"objects/obj_ponto_entrada/obj_ponto_entrada.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":256.0,"y":384.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5540FE94","properties":[],"isDnd":false,"objectId":{"name":"obj_remedio_fim","path":"objects/obj_remedio_fim/obj_remedio_fim.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1024.0,"y":352.0,},
       ],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"parede","tilesetId":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":43,"SerialiseHeight":24,"TileCompressedData":[
 -274,-2147483648,1,0,-32,-2147483648,1,31,-26,32,1,33,-15,-2147483648,1,40,-26,41,1,42,-15,-2147483648,1,40,-26,41,1,42,-15,-2147483648,1,40,-26,41,1,42,-15,-2147483648,1,49,-26,536870944,1,
@@ -181,6 +182,7 @@
     {"name":"inst_328B7A21","path":"rooms/rm_sotao/rm_sotao.yy",},
     {"name":"inst_DAEC96E","path":"rooms/rm_sotao/rm_sotao.yy",},
     {"name":"inst_737869D4","path":"rooms/rm_sotao/rm_sotao.yy",},
+    {"name":"inst_5540FE94","path":"rooms/rm_sotao/rm_sotao.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
