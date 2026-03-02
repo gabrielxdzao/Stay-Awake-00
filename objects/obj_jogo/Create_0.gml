@@ -1,5 +1,5 @@
-
-audio_master_gain(0.8);
+som_atual_loop = noone;
+audio_master_gain(0.1);
 
  #region
 
@@ -102,7 +102,7 @@ reiniciar_run = function()
 
     criatura_existe = false;
 
-    room_goto(rm_quarto);
+    obj_jogo.trocar_room(rm_quarto, "cama");
 };
 
 trocar_room = function(_room, _entrada)

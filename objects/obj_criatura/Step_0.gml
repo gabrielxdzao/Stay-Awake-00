@@ -56,6 +56,7 @@ if (instance_exists(obj_jogador))
 
         estado_criatura = 2;
         sprite_index = sprite_attack;
+		audio_play_sound(snd_attack, 1, false);
         image_index = 0;
         image_speed = 1;
         exit;
@@ -108,7 +109,10 @@ else
         }
     }
 }
-
+if (abs(hsp) > 0 && !audio_is_playing(snd_criatura_walk))
+    audio_play_sound(snd_criatura_walk, 1, true);
+else if (abs(hsp) == 0 && audio_is_playing(snd_criatura_walk))
+    audio_stop_sound(snd_criatura_walk);
 // sprites movimento
 if (abs(hsp) > 0)
 {

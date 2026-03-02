@@ -3,6 +3,7 @@ entradas_possiveis = ["corredor", "cozinha", "sala", "escritorio", "banheiro"];
 
 interagir = function(_jogador)
 {
+	audio_play_sound(snd_porta_abrindo, 1, false);
     if (!instance_exists(obj_jogo)) return;
 
     var usar_random = false;

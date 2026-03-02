@@ -131,6 +131,7 @@ if (estado == 0)
 // ABRINDO
 if (estado == 1)
 {
+	audio_play_sound(snd_armarios, 1, false);
     var frame = image_index;
 
     if (perto)

@@ -130,6 +130,7 @@ atualizar_estamina = function(_movendo)
             stamina = 0;
             exausto = true;
             correndo = false;
+			audio_play_sound(snd_exausto, 1, false);
         }
     }
     else
@@ -231,7 +232,7 @@ mover_e_colidir = function()
 //VIDA / DANO
 tomar_dano = function()
 {
-	if (obj_jogo.jogo_bloqueado) return;
+    if (obj_jogo.jogo_bloqueado) return;
     if (invencivel || morto) return;
 
     vida -= 1;
@@ -241,14 +242,16 @@ tomar_dano = function()
         morto = true;
         hsp = 0;
         vsp = 0;
+
+        audio_play_sound(snd_morrendo, 1, false);
+
+        alarm[0] = room_speed * 2; // 2 segundos antes de resetar
         return;
     }
 
-    // ativa estado de hit
     em_hit = true;
     tempo_hit = tempo_hit_max;
 
-    // empurra para trás (oposto da direção que está olhando)
     hsp = -direcao * knockback_forca;
     vsp = -knockback_vertical;
 
@@ -311,6 +314,7 @@ entrar_ou_sair_esconderijo = function()
 
     if (esc != noone)
     {
+		audio_play_sound(snd_escondido, 1, false);
 		obj_hud.mostrar_texto("que local apertado", 1.2);
         escondido = true;
         esconderijo_atual = esc;
@@ -447,6 +451,14 @@ atualizar = function()
     else
     {
         atualizar_sprite();
+		if (abs(hsp) > 0 && no_chao && !audio_is_playing(snd_walk))
+{
+    audio_play_sound(snd_walk, 1, true);
+}
+else if ((abs(hsp) == 0 || !no_chao) && audio_is_playing(snd_walk))
+{
+    audio_stop_sound(snd_walk);
+}
         entrar_ou_sair_esconderijo();
         verificar_interacao();
     }

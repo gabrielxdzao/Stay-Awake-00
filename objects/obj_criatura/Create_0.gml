@@ -1,4 +1,4 @@
-
+audio_play_sound(snd_spawn, 1, false);
 estado_criatura = 0; // 0 spawn  1 perseguindo 2 indo porta 3 indo esconderijo  4 atacando
 
 // MOVIMENTO

@@ -12,6 +12,7 @@ if (!em_transicao && !jogo_bloqueado)
             {
                 sanidade = sanidade_max;
                 estado = ESTADO_JOGO.INSANIDADE;
+				audio_play_sound(snd_transicao, 1, false);
                 em_transicao = true;
                 tempo_transicao = tempo_transicao_max;
 
@@ -66,6 +67,24 @@ break;
         case ESTADO_JOGO.COLAPSO:
         break;
     }
+	// controle de som ambiente
+
+var som_desejado = noone;
+
+if (estado == ESTADO_JOGO.LUCIDEZ)
+    som_desejado = snd_lucido;
+else
+    som_desejado = snd_insano;
+
+if (som_atual_loop != som_desejado)
+{
+    if (audio_is_playing(som_atual_loop))
+        audio_stop_sound(som_atual_loop);
+
+    som_atual_loop = som_desejado;
+    audio_play_sound(som_atual_loop, 0, true);
+}
+	
 }
 
 // transição de estado
