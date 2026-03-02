@@ -18,7 +18,8 @@ if (estado == ESTADO_JOGO.INSANIDADE || estado == ESTADO_JOGO.COLAPSO)
            
             if (estado == ESTADO_JOGO.COLAPSO)
             {
-                spawnar = true;
+                if (irandom(99) < 50)
+				spawnar = true;
             }
             else
             {
@@ -30,8 +31,8 @@ if (estado == ESTADO_JOGO.INSANIDADE || estado == ESTADO_JOGO.COLAPSO)
                 // 0 = 100% chance
                 // 1.0 = chance mínima
 
-                var chance_min = 40;  // quando quase cheio
-                var chance_max = 99;  // quando quase zerando
+                var chance_min = 30;  // quando quase cheio
+                var chance_max = 50;  // quando quase zerando
 
                 var chance_atual = lerp(chance_max, chance_min, porcentagem);
 

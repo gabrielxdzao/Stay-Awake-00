@@ -25,8 +25,8 @@ estado = ESTADO_JOGO.LUCIDEZ;
 sanidade_max = 100;
 sanidade = sanidade_max;
 
-vel_lucidez = 50;
-vel_insanidade = 30;
+vel_lucidez = 10;
+vel_insanidade = 1;
 
 
 
@@ -54,7 +54,7 @@ jogo_bloqueado = false;
 
 /// SISTEMA DE REMÉDIOS
 
-ciclo_atual = 3;
+ciclo_atual = 1;
 chance_remedio = 10;
 chance_falso = 80;
 max_falsos_ciclo = 0;
@@ -76,7 +76,7 @@ rooms_random = [rm_corredor, rm_cozinha, rm_sala, rm_escritorio, rm_banheiro];
 
 // CONTROLE DA CRIATURA
 criatura_timer = -1; // -1 significa inativo
-chance_spawn_criatura = 99;
+chance_spawn_criatura = 50;
 delay_spawn_min = 1;
 delay_spawn_max = 2;
 
@@ -147,20 +147,22 @@ iniciar_novo_ciclo = function()
 }
 else if (ciclo_atual == 2)
 {
-	vel_lucidez = 5;
+	vel_lucidez = 20;
+	vel_insanidade = 3;
     max_falsos_ciclo = 3;
     total_armarios_ciclo = 11;
     portas_random_ativas = true;
-	chance_random_porta = 60;
+	chance_random_porta = 50;
 	//rooms_random = [rm_corredor, rm_corredor, rm_corredor];
 }
 else if (ciclo_atual == 3)
 {
-	vel_lucidez = 10;
-    max_falsos_ciclo = 9;
-    total_armarios_ciclo = 11;
+	vel_lucidez = 30;
+	vel_insanidade = 5;
+    max_falsos_ciclo = 10;
+    total_armarios_ciclo = 20;
     portas_random_ativas = true;
-	chance_random_porta = 99;
+	chance_random_porta = 80;
 }
 
     // LIMPA LISTAS GLOBAIS

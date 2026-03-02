@@ -111,6 +111,7 @@
     {"id":{"name":"spr_dispensa_abrindo_outline","path":"sprites/spr_dispensa_abrindo_outline/spr_dispensa_abrindo_outline.yy",},"order":2,},
     {"id":{"name":"spr_geladeira","path":"sprites/spr_geladeira/spr_geladeira.yy",},"order":3,},
     {"id":{"name":"spr_placeholder","path":"sprites/spr_placeholder/spr_placeholder.yy",},"order":1,},
+    {"id":{"name":"spr_janela_fim","path":"sprites/spr_janela_fim/spr_janela_fim.yy",},"order":2,},
     {"id":{"name":"spr_porta","path":"sprites/spr_porta/spr_porta.yy",},"order":0,},
     {"id":{"name":"obj_abajur","path":"objects/obj_abajur/obj_abajur.yy",},"order":0,},
     {"id":{"name":"obj_privada","path":"objects/obj_privada/obj_privada.yy",},"order":4,},
@@ -139,6 +140,7 @@
     {"id":{"name":"obj_mesinha","path":"objects/obj_mesinha/obj_mesinha.yy",},"order":4,},
     {"id":{"name":"fnt_hud","path":"fonts/fnt_hud/fnt_hud.yy",},"order":1,},
     {"id":{"name":"spr_geladeira_bloqueado","path":"sprites/spr_geladeira_bloqueado/spr_geladeira_bloqueado.yy",},"order":0,},
+    {"id":{"name":"rm_quarto_fim","path":"rooms/rm_quarto_fim/rm_quarto_fim.yy",},"order":13,},
     {"id":{"name":"obj_quadro","path":"objects/obj_quadro/obj_quadro.yy",},"order":1,},
     {"id":{"name":"spr_barra_stamina","path":"sprites/spr_barra_stamina/spr_barra_stamina.yy",},"order":0,},
     {"id":{"name":"spr_jogador_jump","path":"sprites/spr_jogador_jump/spr_jogador_jump.yy",},"order":0,},
@@ -185,6 +187,7 @@
     {"roomId":{"name":"rm_escritorio","path":"rooms/rm_escritorio/rm_escritorio.yy",},},
     {"roomId":{"name":"rm_banheiro","path":"rooms/rm_banheiro/rm_banheiro.yy",},},
     {"roomId":{"name":"rm_sotao","path":"rooms/rm_sotao/rm_sotao.yy",},},
+    {"roomId":{"name":"rm_quarto_fim","path":"rooms/rm_quarto_fim/rm_quarto_fim.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

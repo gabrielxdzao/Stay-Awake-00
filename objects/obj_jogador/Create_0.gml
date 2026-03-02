@@ -7,8 +7,8 @@ ultimo_spawn = "";
 
 
 // MOVIMENTO HORIZONTAL
-//vel_andar = 1.5;
-vel_andar = 5;
+vel_andar = 1.5;
+//vel_andar = 5;
 acel = 0.35;
 atrito = 0.25;
 

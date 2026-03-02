@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_porta",
+    "path": "objects/obj_porta/obj_porta.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

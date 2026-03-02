@@ -159,7 +159,7 @@ if (endgame_ativo)
         if (endgame_fade >= 1)
         {
             endgame_fade = 1;
-            room_goto(rm_quarto_fim);
+            obj_jogo.trocar_room(rm_quarto_fim, "fim");
             endgame_fase = 2;
             endgame_timer = 4;
         }
